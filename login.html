@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Login</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/icons/logo used in header.svg" alt="header logo">
+        </header>
+
+        <main class="login-main">
+            <div class="login-header">
+                <img src="assets\icons\back.svg" alt="back" />
+                <h2 class="login-title">Log in with Quantum</h2>
+            </div>
+            <div class="login-type">
+                <label class="radio-label">
+                    <input type="radio" name="loginType" checked>
+                    <span class="custom-radio"></span>
+                    District
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="loginType">
+                    <span class="custom-radio"></span>
+                    Independent school
+                </label>
+            </div>
+
+            <form class="login-form">
+                <div class="select-group">
+                    <label for="state">State*</label>
+                    <select id="state" required>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="district">District*</label>
+                    <select id="district" required>
+                        <option>Alabama School District</option>
+                        <option>Other District</option>
+                    </select>
+                </div>
+
+                <div class="floating-input-group">
+                    <input type="text" id="username" required autocomplete="off" placeholder=" " />
+                    <label for="username">Username/Email ID*</label>
+                    <a href="#" class="forgot-link username-link">FORGOT USERNAME?</a>
+                </div>
+
+                <div class="floating-input-group">
+                    <input type="password" id="password" required autocomplete="off" placeholder=" " />
+                    <label for="password">Password*</label>
+                    <img src="assets/icons/preview.svg" alt="Show Password" class="toggle-password" />
+                    <a href="#" class="forgot-link password-link">FORGOT PASSWORD?</a>
+                </div>
+
+                <div class="remember-me-group">
+                    <input type="checkbox" id="remember" checked />
+                    <span class="custom-checkbox"></span>
+                    <label for="remember">Remember Me</label>
+                </div>
+
+                <button type="submit" class="login-btn">LOG IN</button>
+            </form>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#">About</a> | <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-text">
+                <img src="assets/icons/logo used in footer.svg" alt="Quantum Logo" class="logo">
+                <span>Copyright © 2020-2021 Zeus Systems Pvt. Ltd. All rights reserved.</span>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        // Toggle password visibility
+        document.querySelector('.toggle-password').addEventListener('click', function () {
+            const pwd = document.getElementById('password');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        });
+    </script>
+</body>
+
+</html>
