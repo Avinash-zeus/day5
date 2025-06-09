@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="assets/icons/logo used in header.svg" alt="Quantum Logo"
+                    style="margin-right: auto; padding: 1rem 0">
+                <div class="nav-items">
+                    <a href="#" class="active">DASHBOARD</a>
+                    <a href="#">CONTENT</a>
+                    <a href="#">USERS</a>
+                    <a href="#">REPORTS</a>
+                    <a href="#">ADMIN</a>
+                </div>
+                <div class="nav-right">
+                    <div class="notification">
+                        <img src="assets/icons/alerts.svg" alt="Alerts">
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="announcement">
+                        <img src="assets/icons/announcements.svg" alt="Announcements">
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="profile">
+                        <img src="assets/icons/account_circle.svg" alt="Profile" class="profile-img">
+                        <span class="profile-initial">T</span>
+                    </div>
+                    <div class="hamburger">
+                        <img src="assets/icons/hamburger-menu.svg" alt="Menu" />
+                    </div>
+                </div>
+            </nav>
+            <div class="blue-bar"></div>
+        </header>
+
+        <main>
+            <div class="stats-banner">
+                <div class="stat active">
+                    <img src="assets\icons\courses.svg" alt="Courses">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Courses</span>
+                </div>
+                <div class="stat">
+                    <img src="assets\icons\classes.svg" alt="Courses">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Classes</span>
+                </div>
+            </div>
+
+            <div class="courses-header">
+                <span style="font-size: 1rem;">Showing 4 of 4 courses</span>
+                <div class="sort">
+                    <label>Sort By:</label>
+                    <select>
+                        <option>Course Name</option>
+                    </select>
+                    <img src="assets\icons\sort.svg" height="24px">
+                </div>
+            </div>
+
+            <div style="height: 1px; background-color: #696969; width: 97%; margin: 0 auto;"></div>
+
+            <div class="courses-grid">
+                <!-- Course Cards will go here -->
+                <div class="course-card">
+                    <div class="course-content">
+                        <img src="assets\images\imageMask-1.svg" alt="Acceleration">
+                        <div class="course-info">
+                            <div class="course-title">
+                                <h3>Acceleration</h3>
+                                <img src="assets\icons\favourite.svg" alt="">
+                            </div>
+                            <div class="course-meta">
+                                <span>Physics <span class="divider">|</span> Grade 7 </span>
+                                <span class="course-grade"> +2</span>
+                            </div>
+                            <div class="course-details">
+                                <span><b>4</b> Units</span>
+                                <span><b>18</b> Lessons</span>
+                                <span><b>24</b> Topics</span>
+                            </div>
+                            <select>
+                                <option>Mr. Frank's Class B</option>
+                            </select>
+                            <div class="class-info">
+                                <span>50 Students </span>
+                                <span class="divider">|</span>
+                                <span> 21-Jan-2020 - 21-Aug-2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 1px; width: 100%; background-color: #696969;"></div>
+                    <div class="course-action">
+                        <img src="assets\icons\preview.svg" alt="">
+                        <img src="assets\icons\manage course.svg" alt="">
+                        <img src="assets\icons\grade submissions.svg" alt="">
+                        <img src="assets\icons\reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <img src="assets\images\imageMask-2.svg" alt="Displacement, Velocity and Speed">
+                        <div class="course-info">
+                            <div class="course-title">
+                                <h3>Displacement, Velocity and Speed</h3>
+                                <img src="assets\icons\favourite.svg" alt="">
+                            </div>
+                            <div class="course-meta">
+                                <span>Physics 2 <span class="divider">|</span> Grade 6 </span>
+                                <span class="course-grade"> +3</span>
+                            </div>
+                            <div class="course-details">
+                                <span><b>2</b> Units</span>
+                                <span><b>15</b> Lessons</span>
+                                <span><b>20</b> Topics</span>
+                            </div>
+                            <select>
+                                <option>No Classes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="height: 1px; width: 100%; background-color: #696969;"></div>
+                    <div class="course-action">
+                        <img src="assets\icons\preview.svg" alt="">
+                        <img src="assets\icons\manage course.svg" alt="">
+                        <img src="assets\icons\grade submissions.svg" alt="">
+                        <img src="assets\icons\reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <img src="assets\images\imageMask.svg"
+                            alt="Introduction to Biology: Micro organisms and how they affec...">
+                        <div class="course-info">
+                            <div class="course-title">
+                                <h3>Introduction to Biology: Micro organisms and how they affec...</h3>
+                                <img src="assets\icons\favourite.svg" alt="">
+                            </div>
+                            <div class="course-meta">
+                                <span>Biology <span class="divider">|</span> Grade 4 </span>
+                                <span class="course-grade"> +1</span>
+                            </div>
+                            <div class="course-details">
+                                <span><b>5</b> Units</span>
+                                <span><b>16</b> Lessons</span>
+                                <span><b>22</b> Topics</span>
+                            </div>
+                            <select>
+                                <option>All Classes</option>
+                            </select>
+                            <div class="class-info">
+                                <span>300 Students </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 1px; width: 100%; background-color: #696969;"></div>
+                    <div class="course-action">
+                        <img src="assets\icons\preview.svg" alt="">
+                        <img src="assets\icons\manage course.svg" alt="">
+                        <img src="assets\icons\grade submissions.svg" alt="">
+                        <img src="assets\icons\reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <span class="expired">EXPIRED</span>
+                    <div class="course-content">
+                        <img src="assets\images\imageMask-3.svg" alt="Introduction to High School Mathematics">
+                        <div class="course-info">
+                            <div class="course-title">
+                                <h3>Introduction to High School Mathematics</h3>
+                                <img src="assets\icons\favourite.svg" alt="">
+                            </div>
+                            <div class="course-meta">
+                                <span>Mathematics <span class="divider">|</span> Grade 8 </span>
+                                <span class="course-grade"> +3</span>
+                            </div>
+                            <select>
+                                <option>Mr. Frank's Class A</option>
+                            </select>
+                            <div class="class-info">
+                                <span>44 Students </span>
+                                <span class="divider">|</span>
+                                <span> 14-Oct-2019 - 20-Oct-2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 1px; width: 100%; background-color: #696969;"></div>
+                    <div class="course-action">
+                        <img src="assets\icons\preview.svg" alt="">
+                        <img src="assets\icons\manage course.svg" alt="">
+                        <img src="assets\icons\grade submissions.svg" alt="">
+                        <img src="assets\icons\reports.svg" alt="">
+                    </div>
+                </div>
+                <!-- Repeat similar structure for other course cards -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#">About</a> <span class="link-divider">|</span> <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-text">
+                <img src="assets/icons/logo used in footer.svg" alt="Quantum Logo" class="logo">
+                <span class="footer-divider"></span>
+                <span style="color: #494949;">Copyright © 2020-2021 &nbsp; <b>Zeus Systems Pvt. Ltd.</b> &nbsp; All
+                    rights reserved.</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
