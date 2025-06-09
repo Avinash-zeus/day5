@@ -11,73 +11,79 @@
 <body>
     <div class="container">
         <header>
-            <img src="assets/icons/logo used in header.svg" alt="header logo">
+            <div class="header-bgimg">
+                <img src="assets/icons/logo used in header.svg" alt="header logo">
+            </div>
+            <div style="background-color: #3ac7ec; height: 4px;"></div>
         </header>
-
-        <main class="login-main">
-            <div class="login-header">
-                <img src="assets\icons\back.svg" alt="back" />
-                <h2 class="login-title">Log in with Quantum</h2>
-            </div>
-            <div class="login-type">
-                <label class="radio-label">
-                    <input type="radio" name="loginType" checked>
-                    <span class="custom-radio"></span>
-                    District
-                </label>
-                <label class="radio-label">
-                    <input type="radio" name="loginType">
-                    <span class="custom-radio"></span>
-                    Independent school
-                </label>
-            </div>
-
-            <form class="login-form">
-                <div class="select-group">
-                    <label for="state">State*</label>
-                    <select id="state" required>
-                        <option>Alabama</option>
-                        <option>Alaska</option>
-                        <option>Arizona</option>
-                    </select>
+        <div style="margin: 50px;">
+            <div style="background-color: #3ac7ec; height: 4px;"></div>
+            <main class="login-main">
+                <div class="login-header">
+                    <img src="assets\icons\back.svg" alt="back" />
+                    <h2 class="login-title">Log in with Quantum</h2>
                 </div>
-                <div class="select-group">
-                    <label for="district">District*</label>
-                    <select id="district" required>
-                        <option>Alabama School District</option>
-                        <option>Other District</option>
-                    </select>
+                <div class="login-type">
+                    <label class="radio-label">
+                        <input type="radio" name="loginType" checked>
+                        <span class="custom-radio"></span>
+                        District
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="loginType">
+                        <span class="custom-radio"></span>
+                        Independent school
+                    </label>
                 </div>
 
-                <div class="floating-input-group">
-                    <input type="text" id="username" required autocomplete="off" placeholder=" " />
-                    <label for="username">Username/Email ID*</label>
-                    <a href="#" class="forgot-link username-link">FORGOT USERNAME?</a>
-                </div>
+                <form class="login-form">
+                    <div class="select-group">
+                        <label for="state">State*</label>
+                        <select id="state" required>
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                        </select>
+                    </div>
+                    <div class="select-group">
+                        <label for="district">District*</label>
+                        <select id="district" required>
+                            <option>Alabama School District</option>
+                            <option>Other District</option>
+                        </select>
+                    </div>
 
-                <div class="floating-input-group">
-                    <input type="password" id="password" required autocomplete="off" placeholder=" " />
-                    <label for="password">Password*</label>
-                    <img src="assets/icons/preview.svg" alt="Show Password" class="toggle-password" />
-                    <a href="#" class="forgot-link password-link">FORGOT PASSWORD?</a>
-                </div>
+                    <div class="floating-input-group">
+                        <input type="text" id="username" required autocomplete="off" placeholder=" " />
+                        <label for="username">Username/Email ID*</label>
+                        <a href="#" class="forgot-link username-link">FORGOT USERNAME?</a>
+                    </div>
 
-                <div class="remember-me-group">
-                    <input type="checkbox" id="remember" checked />
-                    <span class="custom-checkbox"></span>
-                    <label for="remember">Remember Me</label>
-                </div>
+                    <div class="floating-input-group">
+                        <input type="password" id="password" required autocomplete="off" placeholder=" " />
+                        <label for="password">Password*</label>
+                        <img src="assets/icons/preview.svg" alt="Show Password" class="toggle-password" />
+                        <a href="#" class="forgot-link password-link">FORGOT PASSWORD?</a>
+                    </div>
 
-                <button type="submit" class="login-btn">LOG IN</button>
-            </form>
-        </main>
+                    <div class="remember-me-group">
+                        <input type="checkbox" id="remember" checked />
+                        <span class="custom-checkbox"></span>
+                        <label for="remember">Remember Me</label>
+                    </div>
+
+                    <button type="submit" class="login-btn">LOG IN</button>
+                </form>
+            </main>
+        </div>
 
         <footer>
             <div class="footer-links">
-                <a href="#">About</a> | <a href="#">Contact Us</a>
+                <a href="#">About</a> <span class="link-divider">|</span> <a href="#">Contact Us</a>
             </div>
             <div class="footer-text">
                 <img src="assets/icons/logo used in footer.svg" alt="Quantum Logo" class="logo">
+                <span class="footer-divider"></span>
                 <span>Copyright © 2020-2021 Zeus Systems Pvt. Ltd. All rights reserved.</span>
             </div>
         </footer>

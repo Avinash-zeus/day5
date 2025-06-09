@@ -1,21 +1,39 @@
+@font-face {
+  font-family: 'QuickSand';
+  src: url('assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf');
+}
+
 body {
   background-color: #eeeeee;
+  margin: 0;
+  padding: 0;
+  font-family: 'QuickSand', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }
 
 header {
-  background-image: url('assets/header pattern image.png');
-  padding: 10px 20px;
-  z-index: 10;
+  width: 100%;
   position: sticky;
+  top: 0;
+}
+
+.header-bgimg {
+  /* background-image: url('assets/header pattern image.png'); */
+  background-color: #222e3b;
+  padding: 14px 0 10px 20px;
 }
 
 .login-main {
   background: #fff;
-  margin: 80px auto 0 auto;
-  padding: 32px 32px 24px 32px;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  width: 350px;
+  padding: 50px;
+  width: 540px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -28,11 +46,15 @@ header {
 }
 
 .login-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #222;
+  font-size: 1.5rem;
   flex-grow: 1;
   text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .login-type {
@@ -187,8 +209,6 @@ input::-ms-clear {
 .remember-me-group {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
-  margin-top: 8px;
   position: relative;
 }
 
@@ -228,17 +248,18 @@ input::-ms-clear {
 }
 
 .login-btn {
-  width: 100%;
+  width: 60%;
   background: #1ec89b;
   border: none;
   border-radius: 4px;
   padding: 12px 0;
   font-size: 1.1rem;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(30, 200, 155, 0.15);
+  box-shadow: 2px 6px rgba(141, 141, 141, 0.123);
   cursor: pointer;
   transition: background 0.2s;
-  margin-top: 8px;
+  margin-top: 10px;
+  align-self: center;
 }
 
 .login-btn:hover {
@@ -250,6 +271,7 @@ footer {
   background: #eeeeee;
   padding: 0;
   margin-top: 32px;
+  width: 100%;
 }
 
 .footer-links {
@@ -274,15 +296,21 @@ footer {
 
 .footer-text {
   display: flex;
-  background: #e9e9e9;
-  padding: 10px 24px;
+  background: #e0e1e1;
+  padding: 10px 0px;
+  gap: 20px;
   font-size: 0.95rem;
   justify-content: center;
   align-items: center;
 }
 
-.footer-text .logo {
-  height: 24px;
-  margin-right: 10px;
-  vertical-align: middle;
+.link-divider {
+  color: #c4c4c4;
+  font-size: 1.4rem;
+}
+
+.footer-divider {
+  background-color: #bdbdbd;
+  height: 26px;
+  width: 2px;
 }
