@@ -168,6 +168,7 @@ header {
     input:focus+label,
     input:not(:placeholder-shown)+label {
         top: -12px;
+        left: -4px;
         font-size: 0.85rem;
         color: #1f7a54;
     }

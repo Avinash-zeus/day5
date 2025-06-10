@@ -153,12 +153,14 @@ header .header-bgimg {
 }
 .floating-input-group input:not(:-moz-placeholder-shown) + label {
   top: -12px;
+  left: -4px;
   font-size: 0.85rem;
   color: #1f7a54;
 }
 .floating-input-group input:focus + label,
 .floating-input-group input:not(:placeholder-shown) + label {
   top: -12px;
+  left: -4px;
   font-size: 0.85rem;
   color: #1f7a54;
 }

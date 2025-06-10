@@ -28,6 +28,7 @@ body {
   .hamburger {
     display: flex !important;
     align-items: center;
+    cursor: pointer;
   }
   .hamburger img {
     width: 32px;
@@ -41,7 +42,6 @@ body {
 }
 .hamburger {
   display: none;
-  cursor: pointer;
 }
 
 header {
