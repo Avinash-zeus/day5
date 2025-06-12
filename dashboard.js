@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Announcements
   const announcementList = document.getElementById("announcement-list");
+  const announcementBadge = document.querySelector('.announcement .badge');
   if (!announcementList) return;
 
   fetch("announcements.json")
@@ -96,5 +97,44 @@ document.addEventListener("DOMContentLoaded", () => {
           </li>
         `;
       });
+
+      if (announcementBadge) {
+        announcementBadge.textContent = data.length;
+      }
+    });
+
+  // Notifications
+  const notificationList = document.getElementById("notification-list");
+  const notificationBadge = document.querySelector('.notification .badge');
+  if (!notificationList) return;
+
+  fetch("notifications.json")
+    .then(res => res.json())
+    .then(data => {
+      notificationList.innerHTML = "";
+      data.forEach(item => {
+        const statusIcon =
+          item.status === "read"
+            ? `<img src="assets/icons/read.svg" width="20px" style='margin-left:auto;'"/>`
+            : `<img src="assets/icons/unread.svg" width="20px" style='margin-left:auto;'"/>`;
+        const bgcolor = item.status === "read" ? "white" : "#FFFFEE";
+        notificationList.innerHTML += `
+            <li style="background-color:${bgcolor};">
+              <div class="notification-title">
+                ${item.title || ""}
+                ${statusIcon}
+              </div>
+              <div class="notification-metadata">
+                ${item.course ? `<div><span style="color:#6E6E6E;">Course:</span> ${item.course}</div>` : ""}
+                ${item.class ? `<div><span style="color:#6E6E6E;">Class:</span> ${item.class}</div>` : ""}
+                <div class="notification-date">${item.date || ""}</div>
+              </div>
+            </li>
+          `;
+      });
+
+      if (notificationBadge) {
+        notificationBadge.textContent = data.length;
+      }
     });
 });

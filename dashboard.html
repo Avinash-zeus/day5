@@ -25,8 +25,18 @@
                         <a href="#">ADMIN</a>
                     </div>
                     <div class="notification">
-                        <img src="assets/icons/alerts.svg" alt="Alerts">
-                        <span class="badge">2</span>
+                        <div class="notification-icon">
+                            <img src="assets/icons/alerts.svg" alt="Alerts">
+                            <span class="badge">2</span>
+                        </div>
+                        <div class="notification-dropdown">
+                            <ul id="notification-list">
+                                <!-- Notifications will be injected here by JS -->
+                            </ul>
+                            <div class="dropdown-actions">
+                                <button>SHOW ALL</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="announcement">
                         <div class="announcement-icon">
@@ -38,9 +48,10 @@
                                 <!-- Announcements will be injected here by JS -->
                             </ul>
                             <div class="dropdown-actions">
-                                <button class="show-all-btn">SHOW ALL</button>
-                                <span style="background-color: #c2c2c271; margin:8px 0; width: 2px; height: auto;"></span>
-                                <button class="create-new-btn">CREATE NEW</button>
+                                <button>SHOW ALL</button>
+                                <span
+                                    style="background-color: #c2c2c271; margin:8px 0; width: 2px; height: auto;"></span>
+                                <button>CREATE NEW</button>
                             </div>
                         </div>
                     </div>
