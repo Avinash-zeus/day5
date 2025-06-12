@@ -1,19 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'QuickSand';
-    src: url('assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf');
-}
-
-body {
-    background-color: #eeeeee;
-    font-family: 'QuickSand', sans-serif;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -25,10 +9,6 @@ body {
 @media (max-width: 1040px) {
     .nav-items {
         display: none !important;
-    }
-
-    .nav-right {
-        position: absolute;
     }
 
     .hamburger {
@@ -53,6 +33,95 @@ body {
     }
 }
 
+.announcement-dropdown {
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    top: 89%;
+    right: 2%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+
+    #announcement-list {
+        max-height: 500px;
+        overflow-y: auto;
+        padding: 0;
+        margin: 0;
+
+        li {
+            border-bottom: 1px solid #eaeaea;
+            padding: 14px 18px 10px 18px;
+            list-style: none;
+            position: relative;
+
+            .announcement-author {
+                font-size: 0.93rem;
+                color: #000000;
+                font-weight: 500;
+                margin-bottom: 2px;
+                display: flex;
+                align-items: center;
+            }
+
+            .announcement-message {
+                margin: 10px 0 0 0;
+                font-size: 1.01rem;
+                color: #222e3b;
+                font-weight: 600;
+                line-height: 1.3;
+            }
+
+            .announcement-attachment-date {
+                font-size: 0.92rem;
+                color: #6e6e6e;
+                margin: 10px 0 0 0;
+                display: flex;
+                align-items: center;
+
+                .announcement-attachment {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .announcement-course {
+                font-size: 0.92rem;
+                color: #6e6e6e;
+                margin: 10px 0 0 0;
+            }
+        }
+    }
+
+    .dropdown-actions {
+        display: flex;
+        border-top: 1px solid #eaeaea;
+
+        button {
+            flex: 1;
+            border: none;
+            background: #fff;
+            color: #1f7a54;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 16px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #f3f3f3;
+            }
+        }
+    }
+}
+
+.announcement-icon:hover+.announcement-dropdown,
+.announcement-dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
 .hamburger {
     display: none;
 }
@@ -66,7 +135,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s ease;
 }
 
 .hamburger:hover+.hamburger-dropdown,
@@ -162,6 +231,7 @@ nav {
         display: flex;
         align-items: center;
         gap: 2rem;
+        padding: 0 2rem;
 
         a {
             color: #1fd398;
@@ -183,21 +253,20 @@ nav {
     }
 
     .nav-right {
+        position: absolute;
         display: flex;
         align-items: center;
         gap: 1.5rem;
-        margin-left: 6px;
 
-        .notification,
-        .announcement {
-            position: relative;
+        .notification-icon,
+        .announcement-icon {
             background: none;
-            padding: 0;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            height: 100px;
+            width: 50px;
 
             img {
                 width: 28px;
@@ -205,9 +274,9 @@ nav {
             }
 
             .badge {
-                position: absolute;
-                top: -6px;
-                right: -8px;
+                position: relative;
+                top: -12px;
+                right: 8px;
                 background: #2a7de1;
                 color: #fff;
                 font-size: 0.85rem;

@@ -1,18 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "QuickSand";
-  src: url("assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf");
-}
-body {
-  background-color: #eeeeee;
-  font-family: "QuickSand", sans-serif;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -24,9 +9,6 @@ body {
 @media (max-width: 1040px) {
   .nav-items {
     display: none !important;
-  }
-  .nav-right {
-    position: absolute;
   }
   .hamburger {
     display: flex !important;
@@ -47,6 +29,85 @@ body {
     height: 4px;
   }
 }
+.announcement-dropdown {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  top: 89%;
+  right: 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
+.announcement-dropdown #announcement-list {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+.announcement-dropdown #announcement-list li {
+  border-bottom: 1px solid #eaeaea;
+  padding: 14px 18px 10px 18px;
+  list-style: none;
+  position: relative;
+}
+.announcement-dropdown #announcement-list li .announcement-author {
+  font-size: 0.93rem;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+.announcement-dropdown #announcement-list li .announcement-message {
+  margin: 10px 0 0 0;
+  font-size: 1.01rem;
+  color: #222e3b;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.announcement-dropdown #announcement-list li .announcement-attachment-date {
+  font-size: 0.92rem;
+  color: #6e6e6e;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.announcement-dropdown #announcement-list li .announcement-attachment-date .announcement-attachment {
+  display: flex;
+  align-items: center;
+}
+.announcement-dropdown #announcement-list li .announcement-course {
+  font-size: 0.92rem;
+  color: #6e6e6e;
+  margin: 10px 0 0 0;
+}
+.announcement-dropdown .dropdown-actions {
+  display: flex;
+  border-top: 1px solid #eaeaea;
+}
+.announcement-dropdown .dropdown-actions button {
+  flex: 1;
+  border: none;
+  background: #fff;
+  color: #1f7a54;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.announcement-dropdown .dropdown-actions button:hover {
+  background: #f3f3f3;
+}
+
+.announcement-icon:hover + .announcement-dropdown,
+.announcement-dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
 .hamburger {
   display: none;
 }
@@ -60,7 +121,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
 .hamburger:hover + .hamburger-dropdown,
@@ -145,6 +206,7 @@ nav .nav-items {
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 0 2rem;
 }
 nav .nav-items a {
   color: #1fd398;
@@ -162,32 +224,31 @@ nav .nav-items a.active {
   border-bottom: 4px solid white;
 }
 nav .nav-right {
+  position: absolute;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: 6px;
 }
-nav .nav-right .notification,
-nav .nav-right .announcement {
-  position: relative;
+nav .nav-right .notification-icon,
+nav .nav-right .announcement-icon {
   background: none;
-  padding: 0;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  height: 100px;
+  width: 50px;
 }
-nav .nav-right .notification img,
-nav .nav-right .announcement img {
+nav .nav-right .notification-icon img,
+nav .nav-right .announcement-icon img {
   width: 28px;
   height: 28px;
 }
-nav .nav-right .notification .badge,
-nav .nav-right .announcement .badge {
-  position: absolute;
-  top: -6px;
-  right: -8px;
+nav .nav-right .notification-icon .badge,
+nav .nav-right .announcement-icon .badge {
+  position: relative;
+  top: -12px;
+  right: 8px;
   background: #2a7de1;
   color: #fff;
   font-size: 0.85rem;

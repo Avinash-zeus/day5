@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'QuickSand';
+    src: url('assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf');
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: 'QuickSand', sans-serif;
+}

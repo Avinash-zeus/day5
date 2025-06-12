@@ -1,33 +1,34 @@
-fetch('courses.json')
-  .then(response => response.json())
-  .then(courses => {
-    const grid = document.getElementById('coursesGrid');
-    grid.innerHTML = '';
-    courses.forEach(course => {
-      const card = document.createElement('div');
-      card.className = 'course-card';
-      if (course.expired) {
-        card.innerHTML += `<span class="expired">EXPIRED</span>`;
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('courses.json')
+    .then(response => response.json())
+    .then(courses => {
+      const grid = document.getElementById('coursesGrid');
+      grid.innerHTML = '';
+      courses.forEach(course => {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+        if (course.expired) {
+          card.innerHTML += `<span class="expired">EXPIRED</span>`;
+        }
 
-      // Handle class array for select options
-      let noClasses = false;
-      let classOptions = '';
-      if (
-        !Array.isArray(course.class) ||
-        course.class.length === 0 ||
-        course.class[0] === null ||
-        course.class[0] === ''
-      ) {
-        classOptions = `<option value="" selected style="color:gray;">No Classes</option>`;
-        noClasses = true;
-      } else {
-        classOptions = course.class
-          .map(cls => `<option>${cls}</option>`)
-          .join('');
-      }
+        // Handle class array for select options
+        let noClasses = false;
+        let classOptions = '';
+        if (
+          !Array.isArray(course.class) ||
+          course.class.length === 0 ||
+          course.class[0] === null ||
+          course.class[0] === ''
+        ) {
+          classOptions = `<option value="" selected style="color:gray;">No Classes</option>`;
+          noClasses = true;
+        } else {
+          classOptions = course.class
+            .map(cls => `<option>${cls}</option>`)
+            .join('');
+        }
 
-      card.innerHTML += `
+        card.innerHTML += `
         <div class="course-content">
           <img src="${course.image}" alt="${course.title}">
           <div class="course-info">
@@ -61,6 +62,39 @@ fetch('courses.json')
           <img src="assets/icons/reports.svg" alt="" style="opacity: ${course.canReport === false ? 0.5 : 1}; cursor: ${course.canReport === false ? 'not-allowed' : 'pointer'};">
         </div>
       `;
-      grid.appendChild(card);
+        grid.appendChild(card);
+      });
     });
-  });
+
+  // Announcements
+  const announcementList = document.getElementById("announcement-list");
+  if (!announcementList) return;
+
+  fetch("announcements.json")
+    .then(res => res.json())
+    .then(data => {
+      announcementList.innerHTML = "";
+      data.forEach((item, idx) => {
+        const statusIcon = item.status === "read"
+          ? `<img src="assets/icons/read.svg" width="20px" style='margin-left:auto;'"/>`
+          : `<img src="assets/icons/unread.svg" width="20px" style='margin-left:auto;'"/>`;
+        const bgcolor = item.status === "read" ? "white" : "#FFFFEE";
+        announcementList.innerHTML += `
+          <li style="background-color:${bgcolor};">
+            <div class="announcement-author">
+              <span style="color:gray;">PA:&nbsp;</span>${item.author}
+              ${statusIcon}
+            </div>
+            <div class="announcement-message">
+              ${item.message}
+            </div>
+            ${item.course ? `<div class="announcement-course">Course: ${item.course}</div>` : ""}
+            <div class="announcement-attachment-date">
+              ${item.attachments ? `<div class="announcement-attachment"><img src="assets/icons/paperclip.svg" width="16px"/>${item.attachments} files are attached</div>` : ""}
+              <div style="margin-left:auto;">${item.date}</div>
+            </div>
+          </li>
+        `;
+      });
+    });
+});
