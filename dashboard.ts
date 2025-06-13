@@ -175,4 +175,20 @@ document.addEventListener("DOMContentLoaded", () => {
         notificationBadge.textContent = data.length.toString();
       }
     });
+
+  // Active on click
+  const navLinks = document.querySelectorAll('.nav-items a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  const stats = document.querySelectorAll('.stats-banner .stat');
+  stats.forEach(stat => {
+    stat.addEventListener('click', function () {
+      stats.forEach(s => s.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 });

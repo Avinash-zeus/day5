@@ -12,92 +12,96 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <img src="assets/icons/logo used in header.svg" alt="Quantum Logo"
-                    style="margin-right: auto; padding: 1rem 0">
+            <div id="header-bg">
+                <nav>
+                    <img src="assets/icons/logo used in header.svg" alt="Quantum Logo"
+                        style="margin-right: auto; padding: 1rem 0">
 
-                <div class="nav-right">
-                    <div class="nav-items">
-                        <a href="#" class="active">DASHBOARD</a>
-                        <a href="#">CONTENT</a>
-                        <a href="#">USERS</a>
-                        <a href="#">REPORTS</a>
-                        <a href="#">ADMIN</a>
-                    </div>
-                    <div class="notification">
-                        <div class="notification-icon">
-                            <img src="assets/icons/alerts.svg" alt="Alerts">
-                            <span class="badge">2</span>
+                    <div class="nav-right">
+                        <div class="nav-items">
+                            <a href="#" class="active">DASHBOARD</a>
+                            <a href="#">CONTENT</a>
+                            <a href="#">USERS</a>
+                            <a href="#">REPORTS</a>
+                            <a href="#">ADMIN</a>
                         </div>
-                        <div class="notification-dropdown">
-                            <ul id="notification-list">
-                                <!-- Notifications will be injected here by JS -->
-                            </ul>
-                            <div class="dropdown-actions">
-                                <button>SHOW ALL</button>
+                        <div class="notification">
+                            <div class="notification-icon">
+                                <img src="assets/icons/alerts.svg" alt="Alerts">
+                                <span class="badge">2</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="announcement">
-                        <div class="announcement-icon">
-                            <img src="assets/icons/announcements.svg" alt="Announcements">
-                            <span class="badge">1</span>
-                        </div>
-                        <div class="announcement-dropdown">
-                            <ul id="announcement-list">
-                                <!-- Announcements will be injected here by JS -->
-                            </ul>
-                            <div class="dropdown-actions">
-                                <button>SHOW ALL</button>
-                                <span
-                                    style="background-color: #c2c2c271; margin:8px 0; width: 2px; height: auto;"></span>
-                                <button>CREATE NEW</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profile">
-                        <img src="assets/icons/account_circle.svg" alt="Profile" class="profile-img">
-                        <span class="profile-initial">T</span>
-                    </div>
-                    <div class="hamburger">
-                        <img src="assets/icons/hamburger-menu.svg" alt="Menu" />
-                    </div>
-                    <div class="hamburger-dropdown">
-                        <ul class="menu">
-                            <li>
-                                <a href="#">DASHBOARD</a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">CONTENT <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Course Catalog</a></li>
+                            <div class="notification-dropdown">
+                                <ul id="notification-list">
+                                    <!-- Notifications will be injected here by JS -->
                                 </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">USERS <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
-                                <!-- <ul class="submenu">
+                                <div class="dropdown-actions">
+                                    <button>SHOW ALL</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="announcement">
+                            <div class="announcement-icon">
+                                <img src="assets/icons/announcements.svg" alt="Announcements">
+                                <span class="badge">1</span>
+                            </div>
+                            <div class="announcement-dropdown">
+                                <ul id="announcement-list">
+                                    <!-- Announcements will be injected here by JS -->
+                                </ul>
+                                <div class="dropdown-actions">
+                                    <button>SHOW ALL</button>
+                                    <span
+                                        style="background-color: #c2c2c271; margin:8px 0; width: 2px; height: auto;"></span>
+                                    <button>CREATE NEW</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <div class="profile-icon">
+                                <img src="assets/icons/account_circle.svg" alt="Profile" class="profile-img">
+                                <span class="profile-initial">T</span>
+                            </div>
+                        </div>
+                        <div class="hamburger">
+                            <img id="hamburger-icon" src="assets/icons/hamburger-menu.svg" alt="Menu" />
+                            <div class="hamburger-dropdown">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">DASHBOARD</a>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">CONTENT <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Course Catalog</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">USERS <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
+                                        <!-- <ul class="submenu">
                                     <li><a href="#">User Management</a></li>
                                     <li><a href="#">Roles</a></li>
                                 </ul> -->
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">REPORTS <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
-                                <!-- <ul class="submenu">
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">REPORTS <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
+                                        <!-- <ul class="submenu">
                                     <li><a href="#">Performance</a></li>
                                     <li><a href="#">Analytics</a></li>
                                 </ul> -->
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">ADMIN <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
-                                <!-- <ul class="submenu">
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">ADMIN <img src="assets\icons\submenu-arrow.svg" class="arrow"></a>
+                                        <!-- <ul class="submenu">
                                     <li><a href="#">Settings</a></li>
                                     <li><a href="#">Logs</a></li>
                                 </ul> -->
-                            </li>
-                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
             <div class="blue-bar"></div>
         </header>
 

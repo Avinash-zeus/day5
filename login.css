@@ -7,19 +7,23 @@
 }
 
 header {
-  width: 100%;
+  background-image: url("assets/header pattern svg.svg");
   position: sticky;
+  width: 100%;
+  z-index: 100;
   top: 0;
-  z-index: 10;
 }
-header .header-bgimg {
-  background-color: #222e3b;
-  padding: 14px 0 10px 20px;
+header #header-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: sticky;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
 
 .login-main {
   background: #fff;
-  padding: 50px;
+  padding: 40px 50px;
   width: 540px;
   display: flex;
   flex-direction: column;
@@ -243,8 +247,8 @@ header .header-bgimg {
 /* --- Footer Styles --- */
 footer {
   background: #eeeeee;
-  padding: 0;
-  margin-top: 32px;
+  position: relative;
+  bottom: 0;
   width: 100%;
 }
 footer .footer-links {

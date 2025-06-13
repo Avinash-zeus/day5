@@ -9,6 +9,11 @@
     src: url('assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf');
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: #eeeeee;
     font-family: 'QuickSand', sans-serif;

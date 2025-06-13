@@ -72,4 +72,19 @@ document.addEventListener("DOMContentLoaded", function () {
             notificationBadge.textContent = data.length.toString();
         }
     });
+    // Active on click
+    var navLinks = document.querySelectorAll('.nav-items a');
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            navLinks.forEach(function (l) { return l.classList.remove('active'); });
+            this.classList.add('active');
+        });
+    });
+    var stats = document.querySelectorAll('.stats-banner .stat');
+    stats.forEach(function (stat) {
+        stat.addEventListener('click', function () {
+            stats.forEach(function (s) { return s.classList.remove('active'); });
+            this.classList.add('active');
+        });
+    });
 });

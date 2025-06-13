@@ -20,7 +20,7 @@
         height: 100px;
         width: 50px;
 
-        img {
+        #hamburger-icon {
             width: 32px;
             height: 32px;
         }
@@ -31,6 +31,14 @@
         background-color: #3ac7ec;
         height: 4px;
     }
+
+    .notification-dropdown {
+        right: 80% !important;
+    }
+
+    .announcement-dropdown {
+        right: 50% !important;
+    }
 }
 
 .notification-dropdown {
@@ -38,11 +46,12 @@
     background-color: white;
     position: absolute;
     top: 89%;
-    right: 2%;
+    right: 17%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease;
+    z-index: 20;
 
     #notification-list {
         max-height: 500px;
@@ -117,11 +126,12 @@
     background-color: white;
     position: absolute;
     top: 89%;
-    right: 2%;
+    right: 7%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease;
+    z-index: 20;
 
     #announcement-list {
         max-height: 500px;
@@ -227,17 +237,23 @@
     background-color: white;
     position: absolute;
     top: 89%;
-    right: 2%;
+    right: 0.4em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease;
 }
 
-.hamburger:hover+.hamburger-dropdown,
+.hamburger:hover,
 .hamburger-dropdown:hover {
-    opacity: 1;
-    visibility: visible;
+    .hamburger-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #hamburger-icon {
+        filter: brightness(0) invert(1);
+    }
 }
 
 .menu {
@@ -304,11 +320,19 @@
 }
 
 header {
-    background-color: #222e3b;
+    background-image: url('assets/header pattern svg.svg');
     position: sticky;
     width: 100%;
     z-index: 100;
     top: 0;
+
+    #header-bg {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: sticky;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+    }
 }
 
 .blue-bar {
@@ -352,14 +376,15 @@ nav {
         position: absolute;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 1.5rem;
 
         .notification-icon,
-        .announcement-icon {
+        .announcement-icon,
+        .profile-icon {
             background: none;
             display: flex;
             align-items: center;
-            justify-content: center;
             cursor: pointer;
             height: 100px;
             width: 50px;
@@ -367,32 +392,26 @@ nav {
             img {
                 width: 28px;
                 height: 28px;
+                position: relative;
+                left: 25%;
             }
 
             .badge {
                 position: relative;
-                top: -12px;
-                right: 8px;
+                top: -14px;
+                right: 2px;
                 background: #2a7de1;
                 color: #fff;
                 font-size: 0.85rem;
                 font-weight: bold;
                 border-radius: 50%;
-                padding: 1px 6px;
-                min-width: 18px;
+                min-width: 22px;
                 text-align: center;
                 border: 2px solid #222e3b;
             }
         }
 
         .profile {
-            position: relative;
-            width: 38px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
 
             .profile-img {
                 width: 38px;
@@ -401,24 +420,24 @@ nav {
                 object-fit: cover;
                 background: #fff;
                 border: #1fd398 2px solid;
+                position: relative;
+                left: 25%;
             }
 
             .profile-initial {
-                position: absolute;
-                right: -4px;
-                top: -2px;
+                position: relative;
+                top: -14px;
+                right: 2px;
                 background: #fff;
                 color: #222e3b;
                 font-weight: bold;
-                font-size: 1.1rem;
+                font-size: 0.85rem;
                 border-radius: 50%;
-                width: 20px;
-                height: 20px;
+                min-width: 18px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border: 1px solid #ccc;
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
                 pointer-events: none;
             }
         }
@@ -474,10 +493,12 @@ main {
         display: flex;
         align-items: center;
         gap: 16px;
+        margin-bottom: 12px;
 
         label {
             display: inline-block;
             white-space: nowrap;
+            font-size: 1rem;
         }
 
         select {
@@ -485,8 +506,8 @@ main {
             border-bottom: 2px solid #000;
             background-color: #00000000;
             outline: none;
-            width: 180px;
-            font-size: 1.1rem;
+            width: fit-content;
+            font-size: 1.4rem;
         }
     }
 }
@@ -603,8 +624,8 @@ main {
 /* --- Footer Styles --- */
 footer {
     background: #eeeeee;
-    padding: 0;
-    margin-top: 32px;
+    position: relative;
+    bottom: 0;
     width: 100%;
 
     .footer-links {
