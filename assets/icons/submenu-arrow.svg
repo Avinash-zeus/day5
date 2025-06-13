@@ -1,0 +1,4 @@
+<!-- Down Arrow SVG -->
+<svg class="arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polyline points="4,7 9,12 14,7" stroke="#1F7A54" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
