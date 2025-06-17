@@ -279,14 +279,14 @@
 }
 
 header {
-  background-image: url("assets/header pattern svg.svg");
+  background: black;
   position: sticky;
   width: 100%;
   z-index: 100;
   top: 0;
 }
 header #header-bg {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.6)), url("assets/header pattern svg.svg");
   position: sticky;
   width: 100%;
   z-index: 100;
