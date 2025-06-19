@@ -452,14 +452,18 @@ nav {
 }
 
 main {
-    width: 99%;
+    width: 98%;
+
+    &>* {
+        width: 97%;
+    }
 }
 
 .stats-banner {
     background-color: #8DDC97;
     display: flex;
     justify-content: space-evenly;
-    margin: 2rem;
+    margin: 2rem auto;
 
     .stat {
         flex-grow: 1;
@@ -488,7 +492,7 @@ main {
 .courses-header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    margin: 1rem auto;
     align-items: flex-end;
 
     .sort {
@@ -518,7 +522,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 2rem;
-    padding: 2rem;
+    margin: 2rem auto;
     align-items: stretch;
 
     .course-card {
